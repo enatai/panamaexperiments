@@ -1,0 +1,45 @@
+apply plugin: 'java'
+apply plugin: 'eclipse'
+
+eclipse.classpath.file {
+  // instruct eclipse plugin to put everything to module path
+  whenMerged {
+    entries.findAll { it.kind == 'lib' }.each { it.entryAttributes['module'] = 'true' }
+  }
+}
+
+dependencies {
+  //runtimeOnly(project ':libcppexperiments')
+  def junitVersion = "5.8.1"
+  testImplementation "org.junit.jupiter:junit-jupiter-api:${junitVersion}"
+  testImplementation "org.junit.jupiter:junit-jupiter-params:${junitVersion}"
+  testRuntimeOnly "org.junit.jupiter:junit-jupiter-engine:${junitVersion}"
+  testRuntimeOnly "org.junit.platform:junit-platform-commons:1.7.0"
+}
+
+compileTestJava {
+  options.release = 21
+  options.compilerArgs << "--enable-preview"
+  options.fork = true
+  options.forkOptions.executable = "${jdk21_home}/bin/javac"
+}
+
+sourceSets {
+  test {
+    java {
+      srcDirs += ["src/gen/java"]
+    }
+  }
+}
+
+test {
+  jvmArgs += "--enable-preview"
+  systemProperty "java.library.path", (project ':libcppexperiments').buildDir.toString() + "/lib/main/debug/shared/linux/x86-64"
+  executable = "${jdk21_home}/bin/java"
+  
+  useJUnitPlatform()
+
+  testLogging {
+    events "started", "failed"
+  }
+}

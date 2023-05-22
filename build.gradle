@@ -1,0 +1,19 @@
+allprojects {
+  repositories {
+    mavenLocal()
+    mavenCentral()
+  }
+}
+
+subprojects {
+  apply plugin: 'eclipse'
+}
+
+// Make sure to build native library before we run the tests
+// This is because Gradle does not allow to declare dependencies
+// between C++ and Java projects
+evaluationDependsOnChildren()
+project('cppexperiments').tasks['test'].mustRunAfter(project('libcppexperiments').tasks['build'])
+
+if ("$gradle.gradleVersion" != "8.1.1")
+  throw new RuntimeException("Running gradle version $gradle.gradleVersion, required 8.1.1");
