@@ -20,10 +20,10 @@ import static java.lang.foreign.ValueLayout.*;
 public class Point2d {
 
     public static MemoryLayout $LAYOUT() {
-        return constants$0.const$0;
+        return constants$0.const$3;
     }
     public static VarHandle x$VH() {
-        return constants$0.const$1;
+        return constants$0.const$4;
     }
     /**
      * Getter for field:
@@ -32,7 +32,7 @@ public class Point2d {
      * }
      */
     public static int x$get(MemorySegment seg) {
-        return (int)constants$0.const$1.get(seg);
+        return (int)constants$0.const$4.get(seg);
     }
     /**
      * Setter for field:
@@ -41,16 +41,16 @@ public class Point2d {
      * }
      */
     public static void x$set(MemorySegment seg, int x) {
-        constants$0.const$1.set(seg, x);
+        constants$0.const$4.set(seg, x);
     }
     public static int x$get(MemorySegment seg, long index) {
-        return (int)constants$0.const$1.get(seg.asSlice(index*sizeof()));
+        return (int)constants$0.const$4.get(seg.asSlice(index*sizeof()));
     }
     public static void x$set(MemorySegment seg, long index, int x) {
-        constants$0.const$1.set(seg.asSlice(index*sizeof()), x);
+        constants$0.const$4.set(seg.asSlice(index*sizeof()), x);
     }
     public static VarHandle y$VH() {
-        return constants$0.const$2;
+        return constants$0.const$5;
     }
     /**
      * Getter for field:
@@ -59,7 +59,7 @@ public class Point2d {
      * }
      */
     public static int y$get(MemorySegment seg) {
-        return (int)constants$0.const$2.get(seg);
+        return (int)constants$0.const$5.get(seg);
     }
     /**
      * Setter for field:
@@ -68,16 +68,16 @@ public class Point2d {
      * }
      */
     public static void y$set(MemorySegment seg, int x) {
-        constants$0.const$2.set(seg, x);
+        constants$0.const$5.set(seg, x);
     }
     public static int y$get(MemorySegment seg, long index) {
-        return (int)constants$0.const$2.get(seg.asSlice(index*sizeof()));
+        return (int)constants$0.const$5.get(seg.asSlice(index*sizeof()));
     }
     public static void y$set(MemorySegment seg, long index, int x) {
-        constants$0.const$2.set(seg.asSlice(index*sizeof()), x);
+        constants$0.const$5.set(seg.asSlice(index*sizeof()), x);
     }
     public static MethodHandle Point2d$MH() {
-        return RuntimeHelper.requireNonNull(constants$0.const$4,"_ZN5happy7Point2dC1Eii");
+        return RuntimeHelper.requireNonNull(constants$1.const$1,"_ZN5happy7Point2dC1Eii");
     }
 /**
  * {@snippet :
@@ -93,7 +93,7 @@ public class Point2d {
         }
     }
     public static MethodHandle getX$MH() {
-        return RuntimeHelper.requireNonNull(constants$0.const$6,"_ZN5happy7Point2d4getXEv");
+        return RuntimeHelper.requireNonNull(constants$1.const$2,"_ZN5happy7Point2d4getXEv");
     }
 /**
  * {@snippet :
@@ -109,7 +109,7 @@ public class Point2d {
         }
     }
     public static MethodHandle getY$MH() {
-        return RuntimeHelper.requireNonNull(constants$1.const$0,"_ZN5happy7Point2d4getYEv");
+        return RuntimeHelper.requireNonNull(constants$1.const$3,"_ZN5happy7Point2d4getYEv");
     }
 /**
  * {@snippet :
@@ -125,7 +125,7 @@ public class Point2d {
         }
     }
     public static MethodHandle distance$MH() {
-        return RuntimeHelper.requireNonNull(constants$1.const$1,"_ZN5happy7Point2d8distanceEv");
+        return RuntimeHelper.requireNonNull(constants$1.const$4,"_ZN5happy7Point2d8distanceEv");
     }
 /**
  * {@snippet :

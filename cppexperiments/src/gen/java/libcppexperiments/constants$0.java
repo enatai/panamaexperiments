@@ -12,28 +12,22 @@ final class constants$0 {
     // Suppresses default constructor, ensuring non-instantiability.
     private constants$0() {}
     static final StructLayout const$0 = MemoryLayout.structLayout(
+        MemoryLayout.paddingLayout(64)
+    ).withName("Point");
+    static final FunctionDescriptor const$1 = FunctionDescriptor.of(JAVA_INT,
+        RuntimeHelper.POINTER
+    );
+    static final MethodHandle const$2 = RuntimeHelper.downcallHandle(
+        "_ZN5happy5Point8distanceEv",
+        constants$0.const$1
+    );
+    static final StructLayout const$3 = MemoryLayout.structLayout(
         MemoryLayout.paddingLayout(64),
         JAVA_INT.withName("x"),
         JAVA_INT.withName("y")
     ).withName("Point2d");
-    static final VarHandle const$1 = constants$0.const$0.varHandle(MemoryLayout.PathElement.groupElement("x"));
-    static final VarHandle const$2 = constants$0.const$0.varHandle(MemoryLayout.PathElement.groupElement("y"));
-    static final FunctionDescriptor const$3 = FunctionDescriptor.ofVoid(
-        RuntimeHelper.POINTER,
-        JAVA_INT,
-        JAVA_INT
-    );
-    static final MethodHandle const$4 = RuntimeHelper.downcallHandle(
-        "_ZN5happy7Point2dC1Eii",
-        constants$0.const$3
-    );
-    static final FunctionDescriptor const$5 = FunctionDescriptor.of(JAVA_INT,
-        RuntimeHelper.POINTER
-    );
-    static final MethodHandle const$6 = RuntimeHelper.downcallHandle(
-        "_ZN5happy7Point2d4getXEv",
-        constants$0.const$5
-    );
+    static final VarHandle const$4 = constants$0.const$3.varHandle(MemoryLayout.PathElement.groupElement("x"));
+    static final VarHandle const$5 = constants$0.const$3.varHandle(MemoryLayout.PathElement.groupElement("y"));
 }
 
 

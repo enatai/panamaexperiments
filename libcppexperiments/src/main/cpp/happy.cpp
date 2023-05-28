@@ -15,4 +15,16 @@ int Point2d::getY(){ return y;}
 
 int Point2d::distance(){ return 123;}
 
+Point3d::Point3d(int x, int y, int z) : Point2d(x, y), z(z) {
+    cout << "Point3(" << x << ", " << y << ", " << z << ")" << endl;
+}
+
+int Point3d::getZ(){ return z;}
+
+int Point3d::distance(){ return 222;}
+
+int calcDistance(Point* p) {
+    return p->distance();
+}
+
 } /* namespace happy */

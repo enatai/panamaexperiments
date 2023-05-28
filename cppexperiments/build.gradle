@@ -17,6 +17,13 @@ dependencies {
   testRuntimeOnly "org.junit.platform:junit-platform-commons:1.7.0"
 }
 
+compileJava {
+  options.release = 21
+  options.compilerArgs << "--enable-preview"
+  options.fork = true
+  options.forkOptions.executable = "${jdk21_home}/bin/javac"
+}
+
 compileTestJava {
   options.release = 21
   options.compilerArgs << "--enable-preview"
@@ -25,7 +32,7 @@ compileTestJava {
 }
 
 sourceSets {
-  test {
+  main {
     java {
       srcDirs += ["src/gen/java"]
     }

@@ -17,6 +17,22 @@ public class Happy  {
     public static final OfFloat C_FLOAT = JAVA_FLOAT;
     public static final OfDouble C_DOUBLE = JAVA_DOUBLE;
     public static final AddressLayout C_POINTER = RuntimeHelper.POINTER;
+    public static MethodHandle calcDistance$MH() {
+        return RuntimeHelper.requireNonNull(constants$2.const$5,"calcDistance");
+    }
+    /**
+     * {@snippet :
+     * int calcDistance( Point* p);
+     * }
+     */
+    public static int calcDistance(MemorySegment p) {
+        var mh$ = calcDistance$MH();
+        try {
+            return (int)mh$.invokeExact(p);
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
 }
 
 

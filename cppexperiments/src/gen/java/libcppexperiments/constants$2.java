@@ -7,36 +7,33 @@ import java.lang.invoke.VarHandle;
 import java.nio.ByteOrder;
 import java.lang.foreign.*;
 import static java.lang.foreign.ValueLayout.*;
-final class constants$1 {
+final class constants$2 {
 
     // Suppresses default constructor, ensuring non-instantiability.
-    private constants$1() {}
-    static final FunctionDescriptor const$0 = FunctionDescriptor.ofVoid(
+    private constants$2() {}
+    static final VarHandle const$0 = constants$1.const$5.varHandle(MemoryLayout.PathElement.groupElement("z"));
+    static final FunctionDescriptor const$1 = FunctionDescriptor.ofVoid(
         RuntimeHelper.POINTER,
+        JAVA_INT,
         JAVA_INT,
         JAVA_INT
     );
-    static final MethodHandle const$1 = RuntimeHelper.downcallHandle(
-        "_ZN5happy7Point2dC1Eii",
-        constants$1.const$0
-    );
     static final MethodHandle const$2 = RuntimeHelper.downcallHandle(
-        "_ZN5happy7Point2d4getXEv",
-        constants$0.const$1
+        "_ZN5happy7Point3dC1Eiii",
+        constants$2.const$1
     );
     static final MethodHandle const$3 = RuntimeHelper.downcallHandle(
-        "_ZN5happy7Point2d4getYEv",
+        "_ZN5happy7Point3d4getZEv",
         constants$0.const$1
     );
     static final MethodHandle const$4 = RuntimeHelper.downcallHandle(
-        "_ZN5happy7Point2d8distanceEv",
+        "_ZN5happy7Point3d8distanceEv",
         constants$0.const$1
     );
-    static final StructLayout const$5 = MemoryLayout.structLayout(
-        MemoryLayout.paddingLayout(128),
-        JAVA_INT.withName("z"),
-        MemoryLayout.paddingLayout(32)
-    ).withName("Point3d");
+    static final MethodHandle const$5 = RuntimeHelper.downcallHandle(
+        "calcDistance",
+        constants$0.const$1
+    );
 }
 
 
