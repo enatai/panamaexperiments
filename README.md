@@ -16,6 +16,8 @@ Tests are configured for "linux/x86-64" in case of different arch they may fail.
 
 Checkout "cxx" branch and build [jextract with C++ support](https://github.com/mcimadamore/jextract.git)
 
+Run `jextract`:
+
 ```
 jextract -Djextract.debug=true \
  -Dlibclang.debug=true \
@@ -27,3 +29,7 @@ jextract -Djextract.debug=true \
  -lcppexperiments \
  libcppexperiments/src/main/public/happy.hpp
 ```
+
+# Navigation
+
+- [rust-bindgen](rust-bindgen/README.md)
