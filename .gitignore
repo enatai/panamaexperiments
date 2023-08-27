@@ -11,3 +11,5 @@
 **/release/*-SNAPSHOT.jar
 **/dependency-reduced-pom.xml
 **/Debug/
+**/hs_err_*.log
+tmp/
