@@ -33,9 +33,9 @@ final class constants$1 {
         constants$0.const$1
     );
     static final StructLayout const$5 = MemoryLayout.structLayout(
-        MemoryLayout.paddingLayout(128),
+        MemoryLayout.paddingLayout(16),
         JAVA_INT.withName("z"),
-        MemoryLayout.paddingLayout(32)
+        MemoryLayout.paddingLayout(4)
     ).withName("Point3d");
 }
 

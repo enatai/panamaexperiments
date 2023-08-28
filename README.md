@@ -14,7 +14,7 @@ Tests are configured for "linux/x86-64" in case of different arch they may fail.
 
 # Run jextract to generate bindings for libcppexperiments
 
-Checkout "cxx" branch and build [jextract with C++ support](https://github.com/mcimadamore/jextract.git)
+Checkout "cxx2" branch and build [jextract with C++ support](https://github.com/enatai/jextractcpp.git)
 
 Run `jextract`:
 

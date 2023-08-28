@@ -22,7 +22,7 @@ public class Happy  {
     }
     /**
      * {@snippet :
-     * int calcDistance( Point* p);
+     * int calcDistance(struct Point* p);
      * }
      */
     public static int calcDistance(MemorySegment p) {

@@ -9,7 +9,9 @@ import java.lang.foreign.*;
 import static java.lang.foreign.ValueLayout.*;
 /**
  * {@snippet :
- *  * int distance(struct Point* this$);
+ * struct Point {
+ *     int distance(struct Point* this$);
+ * };
  * }
  */
 public class Point {

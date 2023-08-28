@@ -12,7 +12,7 @@ final class constants$0 {
     // Suppresses default constructor, ensuring non-instantiability.
     private constants$0() {}
     static final StructLayout const$0 = MemoryLayout.structLayout(
-        MemoryLayout.paddingLayout(64)
+        MemoryLayout.paddingLayout(8)
     ).withName("Point");
     static final FunctionDescriptor const$1 = FunctionDescriptor.of(JAVA_INT,
         RuntimeHelper.POINTER
@@ -22,7 +22,7 @@ final class constants$0 {
         constants$0.const$1
     );
     static final StructLayout const$3 = MemoryLayout.structLayout(
-        MemoryLayout.paddingLayout(64),
+        MemoryLayout.paddingLayout(8),
         JAVA_INT.withName("x"),
         JAVA_INT.withName("y")
     ).withName("Point2d");

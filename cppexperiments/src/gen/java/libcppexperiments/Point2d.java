@@ -9,12 +9,14 @@ import java.lang.foreign.*;
 import static java.lang.foreign.ValueLayout.*;
 /**
  * {@snippet :
- *  * int x;
- * int y;
- * void Point2d(struct Point2d* this$, int x, int y);
- * int getX(struct Point2d* this$);
- * int getY(struct Point2d* this$);
- * int distance(struct Point2d* this$);
+ * struct Point2d {
+ *     int x;
+ *     int y;
+ *     void Point2d(struct Point2d* this$, int x, int y);
+ *     int getX(struct Point2d* this$);
+ *     int getY(struct Point2d* this$);
+ *     int distance(struct Point2d* this$);
+ * };
  * }
  */
 public class Point2d {
