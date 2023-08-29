@@ -30,9 +30,10 @@ final class constants$2 {
         "_ZN5happy7Point3d8distanceEv",
         constants$0.const$1
     );
-    static final MethodHandle const$5 = RuntimeHelper.downcallHandle(
-        "_Z12calcDistancePN5happy5PointE",
-        constants$0.const$1
+    static final FunctionDescriptor const$5 = FunctionDescriptor.of(JAVA_INT);
+    static final MethodHandle const$6 = RuntimeHelper.downcallHandle(
+        "_ZN5happy8return10Ev",
+        constants$2.const$5
     );
 }
 

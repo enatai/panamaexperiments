@@ -17,8 +17,24 @@ public class Happy  {
     public static final OfFloat C_FLOAT = JAVA_FLOAT;
     public static final OfDouble C_DOUBLE = JAVA_DOUBLE;
     public static final AddressLayout C_POINTER = RuntimeHelper.POINTER;
+    public static MethodHandle return10$MH() {
+        return RuntimeHelper.requireNonNull(constants$2.const$6,"_ZN5happy8return10Ev");
+    }
+    /**
+     * {@snippet :
+     * int return10();
+     * }
+     */
+    public static int return10() {
+        var mh$ = return10$MH();
+        try {
+            return (int)mh$.invokeExact();
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
     public static MethodHandle calcDistance$MH() {
-        return RuntimeHelper.requireNonNull(constants$2.const$5,"_Z12calcDistancePN5happy5PointE");
+        return RuntimeHelper.requireNonNull(constants$3.const$0,"_Z12calcDistancePN5happy5PointE");
     }
     /**
      * {@snippet :

@@ -23,6 +23,9 @@ namespace happy
 
   int Point3d::distance(){ return 222;}
 
+  int return10() {
+    return 10;
+  }
 } /* namespace happy */
 
 int calcDistance(happy::Point* p) {

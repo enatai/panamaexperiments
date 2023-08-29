@@ -34,6 +34,12 @@ namespace happy
     int getZ();
     virtual int distance();
   };
+
+  /**
+   * Function declared inside namespace which returns primitve type
+   */
+  int return10();
+
 } /* namespace happy */
 
 int calcDistance(happy::Point* p);

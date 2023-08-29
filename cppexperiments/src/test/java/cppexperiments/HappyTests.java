@@ -41,6 +41,11 @@ public class HappyTests {
         assertEquals(123, Happy.calcDistance(point2dPtr));
         assertEquals(222, Happy.calcDistance(point3dPtr));
     }
+    
+    @Test
+    public void test_functions() {
+        assertEquals(10, Happy.return10());
+    }
 
     private String toStringPoint2d(MemorySegment pointPtr) {
         return "[x=" + Point2d.getX(pointPtr) + ",y=" + Point2d.getY(pointPtr) + "]";
