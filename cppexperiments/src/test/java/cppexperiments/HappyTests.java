@@ -4,7 +4,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import java.lang.foreign.Arena;
 import java.lang.foreign.MemorySegment;
-import libcppexperiments.CalcDistance;
+import libcppexperiments.Happy;
 import libcppexperiments.Point2d;
 import libcppexperiments.Point3d;
 import org.junit.jupiter.api.Test;
@@ -38,8 +38,8 @@ public class HappyTests {
         Point2d.Point2d(point2dPtr, 20, 22);
         var point3dPtr = Arena.ofAuto().allocate(Point3d.sizeof());
         Point3d.Point3d(point3dPtr, 30, 32, 34);
-        assertEquals(123, CalcDistance.calcDistance(point2dPtr));
-        assertEquals(222, CalcDistance.calcDistance(point3dPtr));
+        assertEquals(123, Happy.calcDistance(point2dPtr));
+        assertEquals(222, Happy.calcDistance(point3dPtr));
     }
 
     private String toStringPoint2d(MemorySegment pointPtr) {

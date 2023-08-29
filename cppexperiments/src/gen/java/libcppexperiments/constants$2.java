@@ -31,7 +31,7 @@ final class constants$2 {
         constants$0.const$1
     );
     static final MethodHandle const$5 = RuntimeHelper.downcallHandle(
-        "calcDistance",
+        "_Z12calcDistancePN5happy5PointE",
         constants$0.const$1
     );
 }

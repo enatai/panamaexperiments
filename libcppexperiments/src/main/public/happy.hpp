@@ -11,30 +11,29 @@
 namespace happy
 {
 
-class Point {
-public:
+  class Point {
+  public:
     virtual int distance() = 0;
     virtual ~Point() {}
-};
+  };
 
-class Point2d: public Point {
+  class Point2d: public Point {
     int x;
     int y;
-public:
+  public:
     Point2d(int x, int y);
     int getX();
     int getY();
     virtual int distance();
-};
+  };
 
-class Point3d: public Point2d {
+  class Point3d: public Point2d {
     int z;
-public:
+  public:
     Point3d(int x, int y, int z);
     int getZ();
     virtual int distance();
-};
-
+  };
 } /* namespace happy */
 
 int calcDistance(happy::Point* p);

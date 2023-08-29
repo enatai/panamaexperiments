@@ -18,7 +18,7 @@ public class Happy  {
     public static final OfDouble C_DOUBLE = JAVA_DOUBLE;
     public static final AddressLayout C_POINTER = RuntimeHelper.POINTER;
     public static MethodHandle calcDistance$MH() {
-        return RuntimeHelper.requireNonNull(constants$2.const$5,"calcDistance");
+        return RuntimeHelper.requireNonNull(constants$2.const$5,"_Z12calcDistancePN5happy5PointE");
     }
     /**
      * {@snippet :
