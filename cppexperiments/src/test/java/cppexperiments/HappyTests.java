@@ -10,6 +10,8 @@ import libcppexperiments.Point3d;
 import org.junit.jupiter.api.Test;
 
 /**
+ * C++ related experiments
+ * 
  * @author Rel enatai@proton.me
  */
 public class HappyTests {

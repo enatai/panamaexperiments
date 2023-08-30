@@ -1,0 +1,29 @@
+plugins {
+  id 'c'
+}
+
+model {
+  buildTypes {
+    debug
+  }
+  platforms {
+    x86 {
+       architecture "x86"
+    }
+  }
+  components {
+    cexperiments(NativeLibrarySpec) {
+      sources {
+        c {
+          source {
+            srcDir "src/main"
+            include "**/*.c"
+          }
+          exportedHeaders {
+            srcDir "src/main/public"
+          }
+        }
+      }
+    }
+  }
+}

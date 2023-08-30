@@ -41,7 +41,9 @@ sourceSets {
 
 test {
   jvmArgs += "--enable-preview"
-  systemProperty "java.library.path", (project ':libcppexperiments').buildDir.toString() + "/lib/main/debug/shared/linux/x86-64"
+  systemProperty "java.library.path",
+    (project ':libcppexperiments').buildDir.toString() + "/lib/main/debug/shared/linux/x86-64:" +
+    (project ':libcexperiments').buildDir.toString() + "/libs/cexperiments/shared"
   executable = "${jdk21_home}/bin/java"
   
   useJUnitPlatform()
